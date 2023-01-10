@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-86842": {
+      "hosting": {
+        "portfolio-nassima-ziani": [
+          "portfolio-86842"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-86842"
+  }
+}
