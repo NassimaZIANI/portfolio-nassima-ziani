@@ -10,9 +10,15 @@ import { provideFunctions, getFunctions } from '@angular/fire/functions';
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
+import { AboutComponent } from './features/about/about.component';
+import { LandingPageComponent } from './features/landing-page/landing-page.component';
+import { SkillComponent } from './features/skill/skill.component';
+import { FormationComponent } from './features/formation/formation.component';
+import { ExperienceComponent } from './features/experience/experience.component';
+import { ContactComponent } from './features/contact/contact.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, AboutComponent, LandingPageComponent, SkillComponent, FormationComponent, ExperienceComponent, ContactComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
