@@ -1,5 +1,18 @@
-.my-bg {
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
   background-color: #b53471;
+}
+
+.nav-link {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* #34b578 */
