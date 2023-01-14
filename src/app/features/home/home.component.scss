@@ -1,3 +1,7 @@
+img {
+  opacity: 0.9;
+}
+
 header.masthead {
   color: #fff;
   background: linear-gradient(180deg, #b53471 0%, #34b578 100%);
@@ -5,8 +9,8 @@ header.masthead {
   background-size: cover;
 }
 header.masthead {
-  padding-top: 15rem;
-  padding-bottom: 14.5rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   color: #fff;
   background: linear-gradient(180deg, #b53471 0%, #34b578 100%);
   background-position: center center;
@@ -16,10 +20,14 @@ header.masthead {
 header.masthead .masthead-subheading {
   font-size: 1.25rem;
   line-height: 2.25rem;
+  font-family: "Work Sans";
+}
+.more-info {
+  font-family: "Work Sans";
 }
 header.masthead .masthead-heading {
-  font-style: italic;
-  font-size: 4.5rem;
+  font-size: 3.75rem;
   font-weight: 500;
   line-height: 4.5rem;
+  font-family: "Eagle Lake";
 }
