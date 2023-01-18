@@ -2,22 +2,20 @@ img {
   opacity: 0.9;
 }
 
-header.masthead {
+.masthead {
   color: #fff;
   background: linear-gradient(180deg, #b53471 0%, #34b578 100%);
   background-position: center center;
   background-size: cover;
 }
-header.masthead {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
+.masthead {
   color: #fff;
   background: linear-gradient(180deg, #b53471 0%, #34b578 100%);
   background-position: center center;
   background-size: cover;
 }
 
-header.masthead .masthead-subheading {
+.masthead .masthead-subheading {
   font-size: 1.25rem;
   line-height: 2.25rem;
   font-family: "Work Sans";
@@ -25,7 +23,7 @@ header.masthead .masthead-subheading {
 .more-info {
   font-family: "Work Sans";
 }
-header.masthead .masthead-heading {
+.masthead .masthead-heading {
   font-size: 3.75rem;
   font-weight: 500;
   line-height: 4.5rem;

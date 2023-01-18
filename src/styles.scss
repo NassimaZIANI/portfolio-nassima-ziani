@@ -5,3 +5,19 @@ body {
   --navbar-scroll-text: white;
   --navbar-scroll-shadow: none;
 }
+
+.px-6 {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+
+.py-10 {
+  padding-top: 10.5rem !important;
+  padding-bottom: 10.5rem !important;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-family: monospace;
+  font-weight: bold;
+}
