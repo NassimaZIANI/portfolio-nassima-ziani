@@ -18,7 +18,18 @@ import { ExperienceComponent } from './features/experience/experience.component'
 import { ContactComponent } from './features/contact/contact.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, AboutComponent, LandingPageComponent, SkillComponent, FormationComponent, ExperienceComponent, ContactComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    LandingPageComponent,
+    SkillComponent,
+    FormationComponent,
+    ExperienceComponent,
+    ContactComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
