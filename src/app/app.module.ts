@@ -16,6 +16,8 @@ import { SkillComponent } from './features/skill/skill.component';
 import { FormationComponent } from './features/formation/formation.component';
 import { ExperienceComponent } from './features/experience/experience.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ContactComponent } from './features/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
