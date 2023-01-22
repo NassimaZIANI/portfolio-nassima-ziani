@@ -1,3 +1,60 @@
-<h2 class="section-heading text-center mb-5">
-  <i class="fa fa-envelope"></i> Contact
-</h2>
+<div class="container-fluid p-5 bg-light">
+  <h2 class="section-heading text-center mb-5">
+    <i class="fa fa-envelope"></i> Contact
+  </h2>
+
+  <div class="row shadow rounded m-5">
+    <div class="col-md-5 contact rounded-start">
+      <div class="m-5">
+        <h4 class="mb-5">Informations de contact</h4>
+        <p>
+          Pour me contacter, merci de bien vouloir remplir le formulaire
+          ci-aprés ou m'envoyer un mail sur mon adresse email ci-dessous.
+        </p>
+        <h5 class="mt-5 mb-3">Email</h5>
+        <p>nassima.ziani1996@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="col-md-7 p-5">
+      <form [formGroup]="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            formControlName="email"
+          />
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Objet</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            formControlName="subject"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5"></textarea>
+        </div>
+        <button type="button" class="btn my-btn pull-right">
+          Envoyer <i class="fa fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
