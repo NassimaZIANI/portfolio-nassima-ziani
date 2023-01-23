@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { provideFunctions, getFunctions } from '@angular/fire/functions';
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
@@ -41,7 +40,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
   ],
   providers: [],
   bootstrap: [AppComponent],

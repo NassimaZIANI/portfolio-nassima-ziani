@@ -23,4 +23,29 @@ export class ContactComponent implements OnInit {
       message: ['', Validators.required],
     });
   }
+
+  onSubmit() {
+    console.log(this.form.value);
+    const { name, email, subject, message } = this.form.value;
+
+    const date = Date();
+    const html = `
+      <div>From: ${name}</div>
+      <div>Subject: ${subject}</div>
+      <div>Email: <a href="mailto:${email}">${email}</a></div>
+      <div>Date: ${date}</div>
+      <div>Message: ${message}</div>
+    `;
+    let formRequest = {
+      to: 'nassima.ziani1996@gmail.com',
+      message: {
+        subject: subject,
+        message: message,
+        html: html,
+      },
+    };
+
+    /* const messagesCollection = collection(this.firestore, 'messages');
+    messagesCollection.add(formRequest); */
+  }
 }

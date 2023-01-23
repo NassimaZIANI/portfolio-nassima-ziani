@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-md-7 p-5">
-      <form [formGroup]="form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="name" class="form-label">Nom</label>
           <input
@@ -49,9 +49,14 @@
 
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="5"></textarea>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="5"
+            formControlName="message"
+          ></textarea>
         </div>
-        <button type="button" class="btn my-btn pull-right">
+        <button class="btn my-btn pull-right" type="submit">
           Envoyer <i class="fa fa-paper-plane"></i>
         </button>
       </form>
