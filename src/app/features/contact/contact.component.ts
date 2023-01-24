@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   public form: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private db: AngularFirestore) {}
 
   ngOnInit(): void {
     this.createForm();
@@ -45,7 +46,7 @@ export class ContactComponent implements OnInit {
       },
     };
 
-    /* const messagesCollection = collection(this.firestore, 'messages');
-    messagesCollection.add(formRequest); */
+    const messagesCollection = this.db.collection('messages');
+    messagesCollection.add(formRequest);
   }
 }

@@ -13,7 +13,6 @@ import { IsActiveMatchOptions } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('section', { read: ElementRef }) mySection: ElementRef;
   // typescript
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
 
@@ -27,7 +26,5 @@ export class HeaderComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.mySection.nativeElement.id);
-  }
+  ngOnInit(): void {}
 }

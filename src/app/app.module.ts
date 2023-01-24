@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
@@ -18,7 +16,8 @@ import { ContactComponent } from './features/contact/contact.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -39,9 +38,8 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
     BrowserAnimationsModule,
     CarouselModule,
     ReactiveFormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
