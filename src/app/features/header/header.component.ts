@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { IsActiveMatchOptions } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ import {
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('section', { read: ElementRef }) mySection: ElementRef;
   // typescript
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
 
@@ -22,7 +24,10 @@ export class HeaderComponent implements OnInit {
       this.navbar.nativeElement.classList.remove('navbar-scrolled');
     }
   }
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.mySection.nativeElement.id);
+  }
 }

@@ -18,6 +18,7 @@ import { ContactComponent } from './features/contact/contact.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions()),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -19,17 +19,25 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto d-flex align-items-center">
           <li class="nav-item">
-            <a class="nav-link mx-3" aria-current="page" href="#home">
+            <a
+              class="nav-link mx-3"
+              routerLink="/"
+              fragment="home"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
               <i class="fa fa-home"></i> Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3" href="#about">
+            <a class="nav-link mx-3" routerLink="/" fragment="about">
               <i class="fa fa-user"></i> A propos</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-3" href="#skills">Compétences</a>
+            <a class="nav-link mx-3" routerLink="/" fragment="skills"
+              >Compétences</a
+            >
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link p-0 mx-5" href="">
@@ -55,19 +63,23 @@
       </div>
     </div>
   </nav>
+</header>
+<div>
   <section class="pb-3" id="home">
     <app-home></app-home>
   </section>
-</header>
-<section class="py-3" id="about"><app-about></app-about></section>
+  <section class="py-3" id="about"><app-about></app-about></section>
 
-<section class="py-3" id="skills"><app-skill></app-skill></section>
+  <section class="py-3" id="skills"><app-skill></app-skill></section>
 
-<section class="py-3" id="formations"><app-formation></app-formation></section>
+  <section class="py-3" id="formations">
+    <app-formation></app-formation>
+  </section>
 
-<section class="py-3" id="experiences">
-  <app-experience></app-experience>
-</section>
+  <section class="py-3" id="experiences">
+    <app-experience></app-experience>
+  </section>
 
-<section class="py-5" id="contact"><app-contact></app-contact></section>
+  <section class="py-5" id="contact"><app-contact></app-contact></section>
+</div>
 <app-footer></app-footer>
