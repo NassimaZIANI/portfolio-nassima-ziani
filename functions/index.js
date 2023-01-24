@@ -15,8 +15,4 @@ exports.senderEmailNotification = functions.firestore
       console.log("Données d'entrée non valides. L'email n'a pas été envoyé.");
       return;
     }
-    const attachments = [];
-    if (data.message.attachment) {
-      attachments.push(data.message.attachment);
-    }
   });

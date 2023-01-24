@@ -13,6 +13,7 @@ import { IsActiveMatchOptions } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  currentSection: string = 'home';
   // typescript
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
 
@@ -27,4 +28,13 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSectionChange(sectionId: string) {
+    this.currentSection = sectionId;
+  }
+
+  scrollTo(section: string) {
+    this.currentSection = section;
+    document.querySelector('#' + section)!.scrollIntoView();
+  }
 }

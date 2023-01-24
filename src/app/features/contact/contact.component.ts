@@ -48,5 +48,7 @@ export class ContactComponent implements OnInit {
 
     const messagesCollection = this.db.collection('messages');
     messagesCollection.add(formRequest);
+
+    this.form.reset();
   }
 }
