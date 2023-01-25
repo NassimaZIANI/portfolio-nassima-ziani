@@ -18,61 +18,95 @@
 
       <div class="col-md-7 p-5">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
-          <div class="mb-3">
-            <label for="name" class="form-label"
-              >Nom<span class="my-text"> *</span></label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              formControlName="name"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label"
-              >Email<span class="my-text"> *</span></label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              formControlName="email"
-            />
-            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-          </div>
-          <div class="mb-3">
-            <label for="subject" class="form-label"
-              >Objet<span class="my-text"> *</span></label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="subject"
-              formControlName="subject"
-            />
-          </div>
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="name" class="form-label"
+                >Nom<span class="my-text"> *</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                formControlName="name"
+                [ngClass]="{
+                  'is-valid':
+                    form.controls['name'].valid &&
+                    form.controls['name']?.touched,
+                  'is-invalid':
+                    form.controls['name'].invalid &&
+                    form.controls['name']?.touched
+                }"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label"
+                >Email<span class="my-text"> *</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                formControlName="email"
+                [ngClass]="{
+                  'is-valid':
+                    form.controls['email'].valid &&
+                    form.controls['email']?.touched,
+                  'is-invalid':
+                    form.controls['email'].invalid &&
+                    form.controls['email']?.touched
+                }"
+              />
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label"
+                >Objet<span class="my-text"> *</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                formControlName="subject"
+                [ngClass]="{
+                  'is-valid':
+                    form.controls['subject'].valid &&
+                    form.controls['subject']?.touched,
+                  'is-invalid':
+                    form.controls['subject'].invalid &&
+                    form.controls['subject']?.touched
+                }"
+              />
+            </div>
 
-          <div class="mb-3">
-            <label for="message" class="form-label"
-              >Message<span class="my-text"> *</span></label
+            <div class="mb-3">
+              <label for="message" class="form-label"
+                >Message<span class="my-text"> *</span></label
+              >
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                formControlName="message"
+                [ngClass]="{
+                  'is-valid':
+                    form.controls['message'].valid &&
+                    form.controls['message']?.touched,
+                  'is-invalid':
+                    form.controls['message'].invalid &&
+                    form.controls['message']?.touched
+                }"
+              ></textarea>
+            </div>
+            <button
+              class="btn my-btn pull-right"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#sendMailModal"
+              [disabled]="form.invalid"
             >
-            <textarea
-              class="form-control"
-              id="message"
-              rows="5"
-              formControlName="message"
-            ></textarea>
+              Envoyer <i class="fa fa-paper-plane"></i>
+            </button>
           </div>
-          <button
-            class="btn my-btn pull-right"
-            type="submit"
-            data-bs-toggle="modal"
-            data-bs-target="#sendMailModal"
-            [disabled]="form.invalid"
-          >
-            Envoyer <i class="fa fa-paper-plane"></i>
-          </button>
         </form>
       </div>
     </div>
