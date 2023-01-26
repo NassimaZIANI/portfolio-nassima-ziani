@@ -5,21 +5,32 @@ img {
 .masthead {
   color: #fff;
   background: linear-gradient(180deg, #5c2e40 0%, #b39084 100%);
-  background-position: center center;
-  background-size: cover;
 }
 
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
+  font-size: 1rem;
+  line-height: 2rem;
   font-family: "Work Sans";
 }
 .more-info {
   font-family: "Work Sans";
 }
 .masthead .masthead-heading {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  line-height: 4.5rem;
+  line-height: 3rem;
   font-family: "Eagle Lake";
+}
+.pt-lg-10 {
+  padding-top: 10.5rem !important;
+}
+@media (min-width: 769px) {
+  .pb-lg-10 {
+    padding-bottom: 10.5rem !important;
+  }
+  .masthead .masthead-heading {
+    font-size: 3.75rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+  }
 }
