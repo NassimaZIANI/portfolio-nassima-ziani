@@ -18,26 +18,18 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto d-flex align-items-center">
-          <li class="nav-item" role="button" (click)="scrollTo('home')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'home' }"
-            >
+          <li class="nav-item" role="button">
+            <a href="#home" class="nav-link mx-3">
               <i class="fa fa-home"></i> Home</a
             >
           </li>
-          <li class="nav-item" role="button" (click)="scrollTo('about')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'about' }"
-            >
+          <li class="nav-item" role="button">
+            <a href="#about" class="nav-link mx-3">
               <i class="fa fa-user"></i> A propos</a
             >
           </li>
-          <li class="nav-item" role="button" (click)="scrollTo('skills')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'skills' }"
+          <li class="nav-item" role="button">
+            <a href="#skills" class="nav-link mx-3"
               ><i class="fa fa-laptop"></i> Compétences</a
             >
           </li>
@@ -46,27 +38,18 @@
               <img src="../../../assets/Nassima ZIANI_logo2.png" height="50" />
             </a>
           </li>
-          <li class="nav-item" role="button" (click)="scrollTo('formations')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'formations' }"
-            >
+          <li class="nav-item" role="button">
+            <a href="#formations" class="nav-link mx-3">
               <i class="fa fa-graduation-cap"></i> Formations</a
             >
           </li>
-          <li class="nav-item" role="button" (click)="scrollTo('experiences')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'experiences' }"
-            >
+          <li class="nav-item" role="button">
+            <a href="#experiences" class="nav-link mx-3">
               <i class="fa fa-briefcase"></i> Experiences</a
             >
           </li>
-          <li class="nav-item" role="button" (click)="scrollTo('contact')">
-            <a
-              class="nav-link mx-3"
-              [ngClass]="{ active: currentSection === 'contact' }"
-            >
+          <li class="nav-item" role="button">
+            <a href="#contact" class="nav-link mx-3">
               <i class="fa fa-envelope"></i> Contact</a
             >
           </li>
@@ -75,7 +58,13 @@
     </div>
   </nav>
 </header>
-<div sectionScroll (sectionChange)="onSectionChange($event)">
+<div
+  data-bs-spy="scroll"
+  data-bs-target="#navbar"
+  data-bs-offset="0"
+  class="content"
+  tabindex="0"
+>
   <section class="pb-3" id="home">
     <app-home></app-home>
   </section>

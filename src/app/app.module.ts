@@ -18,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { SectionScrollDirective } from './directives/section-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { SectionScrollDirective } from './directives/section-scroll.directive';
     FormationComponent,
     ExperienceComponent,
     ContactComponent,
-    SectionScrollDirective,
   ],
   imports: [
     BrowserModule,

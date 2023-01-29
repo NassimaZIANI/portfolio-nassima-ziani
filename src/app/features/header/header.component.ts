@@ -28,13 +28,4 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  onSectionChange(sectionId: string) {
-    this.currentSection = sectionId;
-  }
-
-  scrollTo(section: string) {
-    this.currentSection = section;
-    document.querySelector('#' + section)!.scrollIntoView();
-  }
 }
