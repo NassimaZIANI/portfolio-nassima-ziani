@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ProjectComponent } from './features/project/project.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     FormationComponent,
     ExperienceComponent,
     ContactComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
