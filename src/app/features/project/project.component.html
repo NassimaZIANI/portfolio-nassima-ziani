@@ -36,4 +36,42 @@
       </div>
     </div>
   </div>
+  <div class="container my-5">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-6">
+        <img
+          class="card-img-top mb-5 mb-md-0 rounded shadow-lg shadow-2-strong img-fluid"
+          src="../../../assets/show-time-calculator.png"
+          alt="About me"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bolder mb-4">Show Time Calculator</h4>
+        <p>
+          Ce projet consiste à la réalisation d'une application web qui permet
+          aux utilisateurs de calculer le temps nécessaire dont ils ont besoin
+          afin de compléter une série ou un anime. Le calcul peut se faire sur
+          une série ou un anime que l'utilisateur veut commencer ou qu'il a déjà
+          commencé. Le calcul s'effectue également par rapport au nombre
+          d'épisodes ou le nombre d'heures que l'utilisateur peut regarder par
+          jour.
+        </p>
+        <div class="mt-5">
+          <h5 class="mb-3"><i class="fa fa-code"></i> La stack</h5>
+          <div>Angular 14, Bootstrap 5.2, Firebase</div>
+        </div>
+        <div class="mt-3">
+          <button class="btn my-btn rounded px-3 py-2" (click)="consultShow()">
+            <i class="fa fa-eye"></i> Voir
+          </button>
+          <button
+            class="btn my-btn rounded ms-3 px-3 py-2"
+            (click)="redirectGitShow()"
+          >
+            <i class="fa fa-code"></i> Code
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

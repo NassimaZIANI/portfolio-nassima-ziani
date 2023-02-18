@@ -20,4 +20,15 @@ export class ProjectComponent implements OnInit {
   public consult() {
     window.open('https://nassima-ziani.fr', '_blank');
   }
+
+  public redirectGitShow() {
+    window.open(
+      'https://github.com/NassimaZIANI/show-time-calculator.git',
+      '_blank'
+    );
+  }
+
+  public consultShow() {
+    window.open('https://show-time-calculator.web.app', '_blank');
+  }
 }
